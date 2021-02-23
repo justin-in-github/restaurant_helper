@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Raleway", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #547b64;
+  --clr-bg: #ccc;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.75rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+body {
+  background: var(--clr-bg);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+:focus {
+    outline: none;
+  }
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btnActive {
+    background: var(--clr-dark);
+    color: var(--clr-light)
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--clr-accent);
+    width: 80vw;
+    box-shadow: var(--bs);
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.btnControl {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 30px;
+    padding: 20px 50px;
+}
+
+.results {
+    margin-top: 5px;
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+
+.results_restaurant {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 20px 0;
+    margin: 5px;
+    border: 1px solid var(--clr-accent);
+    width: 49%;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: var(--bs);
+}
+
+.results_restaurant_adress {
+    font-weight: bold;
+}
+
+.results_restaurant_img {
+    margin-top: 10px;
+}

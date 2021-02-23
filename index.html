@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>LunchFinder</title>
+</head>
+<body>
+    <div class="header">
+        <h1>LunchFinder</h1>
+    </div>
+    <div class="content">
+        <div class="category">
+            <h2 class="title">Kategorie</h2>
+            <div class="category_filterBtns">
+                <button class="btn filterBtn category" data-cat="Alles">Alles</button>
+                <button class="btn filterBtn category" data-cat="Burger">Burger</button>
+                <button class="btn filterBtn category" data-cat="Pizza/Pasta">Pizza/Pasta</button>
+                <button class="btn filterBtn category" data-cat="Asiatisch">Asiatisch</button>
+                <button class="btn filterBtn category" data-cat="Hausmannskost">Hausmannskost</button>
+                <button class="btn filterBtn category" data-cat="Sonstiges">Sonstiges</button>
+            </div>
+        
+        </div>
+
+        <div class="distance">
+            <h2 class="title">Entfernung</h2>
+            <div>
+                <button class="btn filterBtn distance" data-dist="&gt;5km">Egal</button>
+                <button class="btn filterBtn distance" data-dist="2-5km">nicht so weit weg</button>
+                <button class="btn filterBtn distance" data-dist="&lt;2km">ganz nah dran</button>
+            </div> 
+        </div>
+
+        <div class="price">
+            <h2 class="title">Preis</h2>
+            <div>
+                <button class="btn filterBtn price" data-price="Teuer">Egal</button>
+                <button class="btn filterBtn price" data-price="Mittel">nicht zu viel</button>
+                <button class="btn filterBtn price" data-price="Günstig">Ende des Monats</button></div>
+        </div>
+
+        <div class="veggy">
+            <h2 class="title">Vegan</h2>
+            <div>
+                <button class="btn filterBtn veggy" data-veggy="Schlecht">Egal</button>
+                <button class="btn filterBtn veggy" data-veggy="Mittel">sollte schon schmecken</button>
+                <button class="btn filterBtn veggy" data-veggy="Sehr">muss ganz lecker sein</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btnControl btnRandomize">Randomize</button>
+            <button class="btn btnControl btnReset">Reset</button>
+        </div>
+    </div>
+
+    <div class="results">
+    </div>
+
+
+    
+</body>
+<script src="js/main.js"></script>
+</html>
