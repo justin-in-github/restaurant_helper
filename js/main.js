@@ -8,17 +8,11 @@ let selectedDistance = []
 let selectedPrice = []
 let selectedVeggy = []
 
-
-//button select/unselect marker:
-//selected specific buttons via ClassName (gives HTML-Collection)
-//for..of loop to always remove "btnActive" from classList, then add it to clicked button
 const buttonsCategory = document.getElementsByClassName("category")
 const buttonsDistance = document.getElementsByClassName("distance")
 const buttonsPrice = document.getElementsByClassName("price")
 const buttonsVeggy = document.getElementsByClassName("veggy")
 
-//filter-function
-//takes event and checks classList for keyword, then pushes into array, depending on class found ("Alles" => push all categories)
 const selectedFilters = (event) => {
     if(event.target.classList.contains("category")){
         selectedCategory = [];
@@ -71,16 +65,10 @@ const selectedFilters = (event) => {
         return null;
     }
 }
-//loop over all filterbuttons to apply eventListener
 buttonsFilter.forEach(b => {
     b.addEventListener("click", selectedFilters)
 })
 
-//show results function
-//1. compare the "selectedXXX"-arrays with every single restaurant from the restaurants-array ("db") and store matches in "results"
-// => eg. clicked "Alles" => selectedCategory = Burger, Pizza, Hausmannskost, ... => r.category = "Burger" => push it to results
-//2. shuffle results array (from stackoverflow)
-//3. map over the results and for every result: create a div, add classList to it and set innerHTML with the restaurants content, then append this new div...
 const filteredRestaurants = () => {
     removeResults()
     let results = fetchedRestaurants.filter(r => (
@@ -108,7 +96,6 @@ const filteredRestaurants = () => {
 }
 buttonRandomize.addEventListener("click", filteredRestaurants)
 
-//on reset, clear all arrays => remove results (divs) => remove selected marker from button
 const resetFilters = () => {
     selectedCategory = []
     selectedDistance = []
@@ -126,7 +113,6 @@ const resetFilters = () => {
 }
 buttonReset.addEventListener("click", resetFilters)
 
-//on reset, removes the selected marker from button
 const removeResults = () => {
     for (let i = 0; i < resultDiv.children.length; i++) {
         while(resultDiv.children.length) {
@@ -135,7 +121,6 @@ const removeResults = () => {
     }
 }
 
-//Durstenfeld shuffle
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));

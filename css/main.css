@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* //set fonts, colors, h1-3-size and box-shadow */
 :root {
   --ff-primary: "Raleway", sans-serif;
   --ff-secondary: "Source Code Pro", monospace;
