@@ -36,9 +36,12 @@ const selectedFilters = (event) => {
         event.target.classList.add("btnActive")
         if (event.target.dataset.dist === ">5km") {
             selectedDistance.push("2-5km", "<2km", ">5km")
+        } else if (event.target.dataset.dist === "2-5km"){
+            selectedDistance.push("<2km", "2-5km")
         } else {
             selectedDistance.push(event.target.dataset.dist)
         }
+        console.log(selectedDistance)
     } else if (event.target.classList.contains("price")){
         selectedPrice = [];
         for (let b of buttonsPrice) {
@@ -47,6 +50,8 @@ const selectedFilters = (event) => {
         event.target.classList.add("btnActive")
         if (event.target.dataset.price === "Teuer") {
             selectedPrice.push("Teuer", "Mittel", "Günstig")
+        } else if (event.target.dataset.price === "Mittel"){
+            selectedPrice.push("Günstig", "Mittel")
         } else {
             selectedPrice.push(event.target.dataset.price)
         }
@@ -58,6 +63,8 @@ const selectedFilters = (event) => {
         event.target.classList.add("btnActive")
         if (event.target.dataset.veggy === "Schlecht") {
             selectedVeggy.push("Schlecht", "Mittel", "Sehr")
+        } else if (event.target.dataset.veggy === "Mittel"){
+            selectedVeggy.push("Sehr", "Mittel")
         } else {
             selectedVeggy.push(event.target.dataset.veggy)
         }
