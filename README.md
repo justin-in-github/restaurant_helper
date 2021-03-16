@@ -48,4 +48,18 @@ Außerdem ist mir zum Schluss aufgefallen, dass die aktiven Button aktiv bleiben
 
 Des Weiteren würde ich auf jeden Fall eine Datenbank einsetzen, anstatt des von mir verwendeten Arrays in der Skriptdatei.
 
+##Changes
+
+###Überarbeitung der Filter-Logik:
+	-Array wird beim Wechsel der Auswahl (z.B. von Preis "Günstig" zu "Mittel") geleert, damit auch nur nach entsprechendem Wert gefiltert wird
+	-Mittlere Kategorien (z.B. Entfernung "Mittel") beeinhaltet ebenfalls "kleinere" Kategorien (hier z.B. die kürzeste Entfernung)
+###Überarbeitung des Stylings:
+	-Anwendung ist jetzt mobile friendly (Basics), Responsiveness verbessert
+	-Nach Wechsel der Auswahl wird der zuvor aktive Button abgewählt (der Button "Alles" aktiviert alle Kategorie-Button)
+###Refactoring
+	-Einige Funktionen wurden umbenannt und deren Funktion deutlicher zu machen
+	
+
+
+
 
